@@ -1,0 +1,48 @@
+:root {
+  --offCanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+
+.offcanvas-header {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-nav {
+  width: var(--offCanvas-width);
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform:  rotate(180deg);
+  transition: all ease 0.25s;
+}
+
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+
+  .sidebar-nav {
+    transform: none;
+    visibility: visible !important;
+    top: var(--topNavbarHeight);
+    height: calc(100% - var(--topNavbarHeight));
+  }
+
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+
+  main {
+    margin-left: var(--offCanvas-width);
+  }
+}
