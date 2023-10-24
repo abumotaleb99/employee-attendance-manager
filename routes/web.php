@@ -17,6 +17,12 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', [AuthController::class, 'login']);
 Route::post('login', [AuthController::class, 'authLogin']);
-Route::get('admin/dashboard', [DashboardController::class, 'dashboard']);
-Route::get('employee/dashboard', [DashboardController::class, 'dashboard']);
 Route::get('logout', [AuthController::class, 'logout']);
+
+Route::group(['middleware' => 'admin'], function() {
+    Route::get('admin/dashboard', [DashboardController::class, 'dashboard']);
+});
+
+Route::group(['middleware' => 'employee'], function() {
+    Route::get('employee/dashboard', [DashboardController::class, 'dashboard']);
+});

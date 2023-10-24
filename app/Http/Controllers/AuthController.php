@@ -8,6 +8,13 @@ use Auth;
 class AuthController extends Controller
 {
     public function login() {
+            if(Auth::check()) {
+                return redirect('admin/dashboard');
+
+            }elseif(Auth::guard('employee')->check()) {
+                return redirect('employee/dashboard');
+            }
+
         return view('backend.auth.login');
     }
 
@@ -34,8 +41,14 @@ class AuthController extends Controller
     }
 
     public function logout() {
-        Auth::logout();
+        if(Auth::check()) {
+            Auth::logout();
+            return redirect(url('/'));
 
-        return redirect(url('/'));
+        }elseif(Auth::guard('employee')->check()) {
+            Auth::guard('employee')->logout();
+            return redirect(url('/'));
+        }
+     
     }
 }
