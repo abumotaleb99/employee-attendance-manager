@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EAM | Employee Attendance Manager</title>
+    <title>{{ !empty($header_title) ? $header_title." |" : "" }} EAM</title>
     <link rel="stylesheet" href="{{ asset('backend') }}/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('backend') }}/css/style.css">
@@ -66,7 +66,7 @@
                      
                     @if (Auth::check())
                     <li>
-                        <a href="#" class="nav-link px-3">
+                        <a href="{{ url('admin/employee/list') }}" class="nav-link px-3">
                             <span class="me-2">
                                 <i class="bi bi-person"></i>
                             </span>

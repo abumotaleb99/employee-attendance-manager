@@ -8,37 +8,9 @@
         <div class="row">
             <div class="col-12 col-sm-6 col-md-3 mb-3">
                 <div class="card border-primary  h-100">
-                    <div class="card-header">Header</div>
+                    <div class="card-header">Total Employee</div>
                     <div class="card-body text-primary">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Some quick example text to build on the card.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-3">
-                <div class="card border-primary h-100">
-                    <div class="card-header">Header</div>
-                    <div class="card-body text-primary">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-3">
-                <div class="card border-primary h-100">
-                    <div class="card-header">Header</div>
-                    <div class="card-body text-primary">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Some quick example text to build on the card.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-3">
-                <div class="card border-primary h-100">
-                    <div class="card-header">Header</div>
-                    <div class="card-body text-primary">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Some quick example text.</p>
+                        <h5 class="card-title">20</h5>
                     </div>
                 </div>
             </div>
