@@ -1,0 +1,2 @@
+email: admingmail.com
+password: 123456
