@@ -100,7 +100,7 @@
                     </li>
 
                     <li>
-                        <a href="{{ url('profile') }}" class="nav-link px-3">
+                        <a href="{{ url('employee/profile/show') }}" class="nav-link px-3">
                             <span class="me-2">
                                 <i class="bi bi-person"></i>
                             </span>

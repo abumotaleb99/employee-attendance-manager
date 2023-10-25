@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +39,10 @@ Route::group(['middleware' => 'admin'], function() {
 
 Route::group(['middleware' => 'employee'], function() {
     Route::get('employee/dashboard', [DashboardController::class, 'dashboard']);
+
+    // Profile Routes
+    Route::get('employee/profile/show', [ProfileController::class, 'show']);
+    Route::get('employee/profile/edit/{id}', [ProfileController::class, 'edit']);
+    Route::post('employee/profile/edit', [ProfileController::class, 'update']);
+
 });
