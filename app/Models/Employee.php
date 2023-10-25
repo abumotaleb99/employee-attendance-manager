@@ -58,7 +58,16 @@ class Employee extends Authenticatable
         
         return $result;
     }
+
+    static public function getSingleEmployeeById($id) {
+        $query = Employee::select('employees.id as employeeId', 'employees.full_name', 'employees.email', 'employees.status', 'employees.password', 'employee_details.*', 'employee_contacts.*')
+            ->leftJoin('employee_details', 'employee_details.employee_id', '=', 'employees.id')
+            ->leftJoin('employee_contacts', 'employee_contacts.employee_id', '=', 'employees.id')
+            ->where('employees.id', $id)
+            ->first();
     
+        return $query;
+    }
     
     
 }

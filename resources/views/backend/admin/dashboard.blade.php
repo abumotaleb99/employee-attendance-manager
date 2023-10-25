@@ -10,7 +10,7 @@
                 <div class="card border-primary  h-100">
                     <div class="card-header">Total Employee</div>
                     <div class="card-body text-primary">
-                        <h5 class="card-title">20</h5>
+                        <h5 class="card-title">{{ $totalEmployee }}</h5>
                     </div>
                 </div>
             </div>

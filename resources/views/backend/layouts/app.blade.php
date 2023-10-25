@@ -53,18 +53,26 @@
 
     <!-- Offcanvas Start -->
     <div class="offcanvas offcanvas-start sidebar-nav bg-dark text-white" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
+        <!-- <div class="offcanvas-header">
           <span class="me-2">
             <i class="bi bi-speedometer2"></i>
           </span>
           <h5 class="offcanvas-title me-auto" id="offcanvasExampleLabel">Dashboard</h5>
           <button type="button" class="btn-close d-lg-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
+        </div> -->
         <div class="offcanvas-body p-0">
             <nav class="navbar-dark">
                 <ul class="navbar-nav">
                      
                     @if (Auth::check())
+                    <li>
+                        <a href="{{ url('admin/dashboard') }}" class="nav-link px-3">
+                            <span class="me-2">
+                                <i class="bi bi-speedometer2"></i>
+                            </span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
                     <li>
                         <a href="{{ url('admin/employee/list') }}" class="nav-link px-3">
                             <span class="me-2">
@@ -82,6 +90,14 @@
                         </a>
                     </li>
                     @elseif (Auth::guard('employee')->check()) 
+                    <li>
+                        <a href="{{ url('employee/dashboard') }}" class="nav-link px-3">
+                            <span class="me-2">
+                                <i class="bi bi-speedometer2"></i>
+                            </span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
 
                     <li>
                         <a href="{{ url('profile') }}" class="nav-link px-3">

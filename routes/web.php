@@ -31,6 +31,9 @@ Route::group(['middleware' => 'admin'], function() {
     Route::post('admin/employee/add-details', [EmployeeController::class, 'addDetails']);
     Route::get('admin/employee/add-contact/{id}', [EmployeeController::class, 'showAddContactForm']);
     Route::post('admin/employee/add-contact', [EmployeeController::class, 'addContact']);
+    Route::get('admin/employee/edit/{id}', [EmployeeController::class, 'edit']);
+    Route::post('admin/employee/edit', [EmployeeController::class, 'update']);
+    Route::get('admin/employee/delete/{id}', [EmployeeController::class, 'delete']);
 });
 
 Route::group(['middleware' => 'employee'], function() {

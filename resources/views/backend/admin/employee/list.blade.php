@@ -99,8 +99,8 @@
                         @endif
                       </td>
                       <td>
-                        <a href="{{ url('admin/employee/add-details/'. $employee->employeeId) }}" class="btn btn-primary">Add Details</a>
-                        <a href="{{ url('admin/employee/add-contact/'. $employee->employeeId) }}" class="btn btn-primary">Add Contact</a>
+                        <a href="{{ url('admin/employee/add-details/'. $employee->employeeId) }}" class="{{ $employee->photo || $employee->address ? 'disabled' : '' }} btn btn-primary">Add Details</a>
+                        <a href="{{ url('admin/employee/add-contact/'. $employee->employeeId) }}" class="{{ $employee->contact_name || $employee->contact_email ? 'disabled' : '' }} btn btn-primary">Add Contact</a>
                         <a href="{{ url('admin/employee/edit/'. $employee->employeeId) }}" class="btn btn-primary">Edit</a>
                         <a href="{{ url('admin/employee/delete/'. $employee->employeeId) }}" class="btn btn-danger">Delete</a>
                       </td>
