@@ -99,10 +99,10 @@
                         @endif
                       </td>
                       <td>
-                        <a href="{{ url('admin/employee/add-details/'. $employee->id) }}" class="btn btn-primary">Add Details</a>
-                        <a href="{{ url('admin/employee/add-contact/'. $employee->id) }}" class="btn btn-primary">Add Contact</a>
-                        <a href="{{ url('admin/employee/edit/'. $employee->id) }}" class="btn btn-primary">Edit</a>
-                        <a href="{{ url('admin/employee/delete/'. $employee->id) }}" class="btn btn-danger">Delete</a>
+                        <a href="{{ url('admin/employee/add-details/'. $employee->employeeId) }}" class="btn btn-primary">Add Details</a>
+                        <a href="{{ url('admin/employee/add-contact/'. $employee->employeeId) }}" class="btn btn-primary">Add Contact</a>
+                        <a href="{{ url('admin/employee/edit/'. $employee->employeeId) }}" class="btn btn-primary">Edit</a>
+                        <a href="{{ url('admin/employee/delete/'. $employee->employeeId) }}" class="btn btn-danger">Delete</a>
                       </td>
                     </tr>
                     @endforeach
